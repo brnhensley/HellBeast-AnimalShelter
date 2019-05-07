@@ -10,11 +10,13 @@ namespace AnimalShelter.Models
     public string Origin {get; set;}
     public string Location {get; set;}
     public int Id {get; set;}
+    //public string ImageURL {get; set;}
 
-    public HellBeast (string name, string origin, string location, int id = 0) {
+    public HellBeast (string name, string origin, string location, /*string imageURL,*/ int id = 0) {
       Name = name;
       Origin = origin;
       Location = location;
+      //ImageURL = imageURL;
       Id = id;
     }
 

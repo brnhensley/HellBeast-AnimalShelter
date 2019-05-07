@@ -1,0 +1,31 @@
+@using AnimalShelter.Models;
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hello friend!</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
+  <body class="container">
+    <h1>Adopt our hell beasts!</h1>
+
+    <ul>
+    @if (Model.Count == 0)
+    {
+      <p>There are no beasts :(!</p>
+    }
+    @if(Model.Count != 0)
+    {
+      @foreach (HellBeast hellbeast in Model)
+      {
+        <li><a href='/beasts/@hellbeast.Id'>@hellbeast.Name</a></li>
+      }
+    }
+    </ul>
+
+    <a href="/beasts/new">List a new hellbeast for sale</a>
+
+    </html>
+  </body>
