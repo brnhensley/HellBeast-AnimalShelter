@@ -144,5 +144,10 @@ namespace AnimalShelter.Models
       }
       return foundHellBeast;
     }
+
+    public void Edit(string newName)
+    {
+
+    }
   }
 }
